@@ -1,0 +1,293 @@
+/* YouTube Shorts Swiper - Admin Styles */
+
+.ytss-admin-wrap {
+    max-width: 1400px;
+}
+
+.ytss-admin-wrap h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ytss-admin-wrap h1 .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: #ff0000;
+}
+
+/* Container */
+.ytss-admin-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .ytss-admin-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Panels */
+.ytss-panel {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.ytss-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+.ytss-panel-header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ytss-panel-body {
+    padding: 20px;
+}
+
+/* Video List */
+#ytss-video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 200px;
+}
+
+.ytss-empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #646970;
+}
+
+.ytss-empty-state .dashicons {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    color: #c3c4c7;
+}
+
+.ytss-empty-state p {
+    margin: 10px 0 0;
+}
+
+/* Video Item */
+.ytss-video-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.ytss-video-item:hover {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.ytss-video-drag {
+    cursor: grab;
+    padding: 5px;
+    color: #999;
+}
+
+.ytss-video-drag:hover {
+    color: #333;
+}
+
+.ytss-video-thumb {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ytss-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ytss-video-thumb .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: #999;
+}
+
+.ytss-video-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ytss-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.ytss-input:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.ytss-url {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.ytss-remove-video {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #999;
+    transition: color 0.2s;
+}
+
+.ytss-remove-video:hover {
+    color: #d63638;
+}
+
+/* Save Section */
+.ytss-save-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.ytss-save-section .button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ytss-save-section .button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+#ytss-save-status,
+#ytss-settings-status {
+    font-size: 13px;
+    color: #00a32a;
+}
+
+/* Settings */
+.ytss-setting-group {
+    margin-bottom: 15px;
+}
+
+.ytss-setting-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.ytss-setting-group select {
+    width: 100%;
+    padding: 8px;
+}
+
+.ytss-setting-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.ytss-settings-panel hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.ytss-settings-panel h3 {
+    margin: 0 0 15px;
+    font-size: 13px;
+}
+
+/* Shortcode Box */
+.ytss-shortcode-box {
+    background: #f0f6fc;
+    border-top: 1px solid #c3c4c7;
+}
+
+.ytss-shortcode-box h3 {
+    margin: 0 0 10px;
+}
+
+.ytss-shortcode-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px 15px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.ytss-shortcode-display code {
+    flex: 1;
+    font-size: 14px;
+    background: none;
+    padding: 0;
+}
+
+#ytss-copy-shortcode {
+    padding: 4px 8px;
+}
+
+#ytss-copy-shortcode .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Add Video Button */
+#ytss-add-video {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#ytss-add-video .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Drag & Drop Sorting */
+.ytss-video-item.sortable-ghost {
+    opacity: 0.4;
+}
+
+.ytss-video-item.sortable-chosen {
+    background: #e7f3ff;
+}

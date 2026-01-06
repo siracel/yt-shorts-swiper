@@ -1,0 +1,225 @@
+/* YouTube Shorts Swiper - Frontend Styles */
+
+.ytss-container {
+    position: relative;
+    padding: 0 50px;
+    margin: 20px 0;
+}
+
+.ytss-swiper {
+    overflow: hidden;
+}
+
+/* Slide */
+.ytss-slide {
+    height: auto;
+}
+
+.ytss-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.78%; /* 9:16 aspect ratio for Shorts */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Thumbnail */
+.ytss-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.ytss-thumbnail img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.ytss-slide:hover .ytss-thumbnail img {
+    transform: scale(1.05);
+}
+
+/* Play Button */
+.ytss-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.ytss-slide:hover .ytss-play-button {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Video Embed */
+.ytss-video-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ytss-video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video Info */
+.ytss-info {
+    padding: 12px 5px;
+}
+
+.ytss-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #0f0f0f;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ytss-channel {
+    font-size: 12px;
+    color: #606060;
+}
+
+/* Navigation Arrows */
+.ytss-container .swiper-button-next,
+.ytss-container .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.ytss-container .swiper-button-next:hover,
+.ytss-container .swiper-button-prev:hover {
+    background: #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.ytss-container .swiper-button-next::after,
+.ytss-container .swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ytss-container .swiper-button-prev {
+    left: 0;
+}
+
+.ytss-container .swiper-button-next {
+    right: 0;
+}
+
+.ytss-container .swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* No Videos Message */
+.ytss-no-videos {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Playing State */
+.ytss-slide.ytss-playing .ytss-thumbnail {
+    display: none !important;
+}
+
+.ytss-slide.ytss-playing .ytss-video-embed {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .ytss-title {
+        color: #f1f1f1;
+    }
+    
+    .ytss-channel {
+        color: #aaa;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ytss-container {
+        padding: 0 35px;
+    }
+    
+    .ytss-container .swiper-button-next,
+    .ytss-container .swiper-button-prev {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .ytss-container .swiper-button-next::after,
+    .ytss-container .swiper-button-prev::after {
+        font-size: 12px;
+    }
+    
+    .ytss-title {
+        font-size: 13px;
+    }
+    
+    .ytss-channel {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ytss-container {
+        padding: 0 25px;
+    }
+    
+    .ytss-video-wrapper {
+        border-radius: 8px;
+    }
+}
+
+/* Loading Animation */
+@keyframes ytss-pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.ytss-thumbnail.loading img {
+    animation: ytss-pulse 1.5s ease-in-out infinite;
+}
