@@ -4,7 +4,7 @@ Tags: youtube, shorts, video, swiper, slider, carousel
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,17 @@ Thumbnail'lar YouTube'dan otomatik olarak çekilir, API key gerekmez.
 
 == Changelog ==
 
+= 1.3.0 =
+* Admin paneli sadeleştirildi
+* Video Başlığı ve Kanal Adı alanları kaldırıldı
+* İlgili checkbox'lar (Başlık Göster, Kanal Adı Göster) kaldırıldı
+* Daha temiz ve basit arayüz
+
+= 1.2.0 =
+* Çoklu dil desteği eklendi (i18n)
+* Türkçe çeviri dosyaları eklendi
+* POT şablon dosyası eklendi
+
 = 1.1.0 =
 * Thumbnail tam ekran kaplama düzeltmesi
 * Video oynatma hatası giderildi
@@ -63,5 +74,5 @@ Thumbnail'lar YouTube'dan otomatik olarak çekilir, API key gerekmez.
 
 == Upgrade Notice ==
 
-= 1.1.0 =
-Thumbnail görüntüleme ve video oynatma iyileştirmeleri.
+= 1.2.0 =
+Çoklu dil desteği eklendi. İngilizce ve Türkçe dil seçenekleri mevcut.

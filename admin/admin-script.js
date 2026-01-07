@@ -4,6 +4,8 @@
 (function($) {
     'use strict';
 
+    const i18n = ytss_ajax.i18n || {};
+
     // YouTube URL'den video ID çıkar
     function getVideoId(url) {
         const patterns = [
@@ -52,7 +54,7 @@
     $(document).on('click', '.ytss-remove-video', function() {
         const $item = $(this).closest('.ytss-video-item');
         
-        if (confirm('Bu videoyu silmek istediğinize emin misiniz?')) {
+        if (confirm(i18n.confirm_delete || 'Are you sure you want to delete this video?')) {
             $item.fadeOut(300, function() {
                 $(this).remove();
                 
@@ -61,8 +63,8 @@
                     $('#ytss-video-list').html(`
                         <div class="ytss-empty-state">
                             <span class="dashicons dashicons-video-alt3"></span>
-                            <p>Henüz video eklenmemiş</p>
-                            <p class="description">Yukarıdaki "Yeni Video Ekle" butonuna tıklayarak başlayın</p>
+                            <p>${i18n.no_videos || 'No videos added yet'}</p>
+                            <p class="description">${i18n.no_videos_desc || 'Click "Add New Video" button above to get started'}</p>
                         </div>
                     `);
                 }
@@ -82,19 +84,13 @@
         const videos = [];
 
         $('#ytss-video-list .ytss-video-item').each(function() {
-            const $item = $(this);
-            const url = $item.find('.ytss-url').val().trim();
-            
+            const url = $(this).find('.ytss-url').val().trim();
             if (url) {
-                videos.push({
-                    url: url,
-                    title: $item.find('.ytss-title').val().trim(),
-                    channel: $item.find('.ytss-channel').val().trim()
-                });
+                videos.push(url);
             }
         });
 
-        $button.prop('disabled', true).text('Kaydediliyor...');
+        $button.prop('disabled', true).text(i18n.saving || 'Saving...');
         $status.text('');
 
         $.ajax({
@@ -107,16 +103,16 @@
             },
             success: function(response) {
                 if (response.success) {
-                    $status.css('color', '#00a32a').text('✓ Kaydedildi!');
+                    $status.css('color', '#00a32a').text('✓ ' + (i18n.saved || 'Saved!'));
                 } else {
-                    $status.css('color', '#d63638').text('✗ Hata: ' + response.data);
+                    $status.css('color', '#d63638').text('✗ ' + (i18n.error || 'Error') + ': ' + response.data);
                 }
             },
             error: function() {
-                $status.css('color', '#d63638').text('✗ Bağlantı hatası');
+                $status.css('color', '#d63638').text('✗ ' + (i18n.connection_error || 'Connection error'));
             },
             complete: function() {
-                $button.prop('disabled', false).html('<span class="dashicons dashicons-saved"></span> Videoları Kaydet');
+                $button.prop('disabled', false).html('<span class="dashicons dashicons-saved"></span> ' + (i18n.save_videos || 'Save Videos'));
                 
                 setTimeout(function() {
                     $status.fadeOut(300, function() {
@@ -136,15 +132,13 @@
             action: 'ytss_save_settings',
             nonce: ytss_ajax.nonce,
             autoplay_speed: $('#ytss-autoplay-speed').val(),
-            show_title: $('#ytss-show-title').is(':checked').toString(),
-            show_channel: $('#ytss-show-channel').is(':checked').toString(),
             show_navigation: $('#ytss-show-navigation').is(':checked').toString(),
             slides_desktop: $('#ytss-slides-desktop').val(),
             slides_tablet: $('#ytss-slides-tablet').val(),
             slides_mobile: $('#ytss-slides-mobile').val()
         };
 
-        $button.prop('disabled', true).text('Kaydediliyor...');
+        $button.prop('disabled', true).text(i18n.saving || 'Saving...');
         $status.text('');
 
         $.ajax({
@@ -153,16 +147,16 @@
             data: settings,
             success: function(response) {
                 if (response.success) {
-                    $status.css('color', '#00a32a').text('✓ Kaydedildi!');
+                    $status.css('color', '#00a32a').text('✓ ' + (i18n.saved || 'Saved!'));
                 } else {
-                    $status.css('color', '#d63638').text('✗ Hata: ' + response.data);
+                    $status.css('color', '#d63638').text('✗ ' + (i18n.error || 'Error') + ': ' + response.data);
                 }
             },
             error: function() {
-                $status.css('color', '#d63638').text('✗ Bağlantı hatası');
+                $status.css('color', '#d63638').text('✗ ' + (i18n.connection_error || 'Connection error'));
             },
             complete: function() {
-                $button.prop('disabled', false).html('<span class="dashicons dashicons-admin-generic"></span> Ayarları Kaydet');
+                $button.prop('disabled', false).html('<span class="dashicons dashicons-admin-generic"></span> ' + (i18n.save_settings || 'Save Settings'));
                 
                 setTimeout(function() {
                     $status.fadeOut(300, function() {

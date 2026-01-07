@@ -1,0 +1,158 @@
+# Turkish translation for YouTube Shorts Swiper
+# Copyright (C) 2024 TE Bilişim
+# This file is distributed under the same license as the YouTube Shorts Swiper plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: YouTube Shorts Swiper 1.2.0\n"
+"Report-Msgid-Bugs-To: https://tebilisim.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: TE Bilişim <info@tebilisim.com>\n"
+"Language-Team: Turkish <info@tebilisim.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: yt-shorts-swiper.php
+msgid "No videos added yet."
+msgstr "Henüz video eklenmemiş."
+
+#: yt-shorts-swiper.php
+msgid "Are you sure you want to delete this video?"
+msgstr "Bu videoyu silmek istediğinize emin misiniz?"
+
+#: yt-shorts-swiper.php
+msgid "Saving..."
+msgstr "Kaydediliyor..."
+
+#: yt-shorts-swiper.php
+msgid "Saved!"
+msgstr "Kaydedildi!"
+
+#: yt-shorts-swiper.php
+msgid "Error"
+msgstr "Hata"
+
+#: yt-shorts-swiper.php
+msgid "Connection error"
+msgstr "Bağlantı hatası"
+
+#: yt-shorts-swiper.php
+msgid "No videos added yet"
+msgstr "Henüz video eklenmemiş"
+
+#: yt-shorts-swiper.php
+msgid "Click \"Add New Video\" button above to get started"
+msgstr "Başlamak için yukarıdaki \"Yeni Video Ekle\" butonuna tıklayın"
+
+#: yt-shorts-swiper.php
+msgid "Save Videos"
+msgstr "Videoları Kaydet"
+
+#: yt-shorts-swiper.php
+msgid "Save Settings"
+msgstr "Ayarları Kaydet"
+
+#: admin/admin-page.php
+msgid "YouTube Shorts Swiper"
+msgstr "YouTube Shorts Swiper"
+
+#: admin/admin-page.php
+msgid "Video List"
+msgstr "Video Listesi"
+
+#: admin/admin-page.php
+msgid "Add New Video"
+msgstr "Yeni Video Ekle"
+
+#: admin/admin-page.php
+msgid "YouTube Shorts URL"
+msgstr "YouTube Shorts URL"
+
+#: admin/admin-page.php
+msgid "Video Title (optional)"
+msgstr "Video Başlığı (opsiyonel)"
+
+#: admin/admin-page.php
+msgid "Channel Name (optional)"
+msgstr "Kanal Adı (opsiyonel)"
+
+#: admin/admin-page.php
+msgid "Delete Video"
+msgstr "Videoyu Sil"
+
+#: admin/admin-page.php
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: admin/admin-page.php
+msgid "Autoplay Speed (ms)"
+msgstr "Otomatik Kaydırma Hızı (ms)"
+
+#: admin/admin-page.php
+msgid "2 seconds"
+msgstr "2 saniye"
+
+#: admin/admin-page.php
+msgid "3 seconds"
+msgstr "3 saniye"
+
+#: admin/admin-page.php
+msgid "4 seconds"
+msgstr "4 saniye"
+
+#: admin/admin-page.php
+msgid "5 seconds"
+msgstr "5 saniye"
+
+#: admin/admin-page.php
+msgid "Disabled"
+msgstr "Kapalı"
+
+#: admin/admin-page.php
+msgid "Show Title"
+msgstr "Başlık Göster"
+
+#: admin/admin-page.php
+msgid "Show Channel Name"
+msgstr "Kanal Adı Göster"
+
+#: admin/admin-page.php
+msgid "Show Navigation Arrows"
+msgstr "Gezinme Oklarını Göster"
+
+#: admin/admin-page.php
+msgid "Responsive Settings"
+msgstr "Responsive Ayarları"
+
+#: admin/admin-page.php
+msgid "Desktop (1024px+)"
+msgstr "Masaüstü (1024px+)"
+
+#: admin/admin-page.php
+msgid "Tablet (768px - 1023px)"
+msgstr "Tablet (768px - 1023px)"
+
+#: admin/admin-page.php
+msgid "Mobile (767px and below)"
+msgstr "Mobil (767px ve altı)"
+
+#: admin/admin-page.php
+msgid "%d video"
+msgid_plural "%d videos"
+msgstr[0] "%d video"
+msgstr[1] "%d video"
+
+#: admin/admin-page.php
+msgid "Shortcode"
+msgstr "Kısa Kod"
+
+#: admin/admin-page.php
+msgid "Copy"
+msgstr "Kopyala"
+
+#: admin/admin-page.php
+msgid "Add this shortcode to any page or post to display the slider."
+msgstr "Bu kısa kodu herhangi bir sayfaya veya yazıya ekleyerek slider'ı görüntüleyebilirsiniz."
